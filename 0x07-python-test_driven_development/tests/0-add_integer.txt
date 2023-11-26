@@ -1,0 +1,42 @@
+# Test for add_integer function
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Test case 1: Add two integers
+>>> add_integer(1, 2)
+3
+
+# Test case 2: Add two integers, one negative
+>>> add_integer(100, -2)
+98
+
+# Test case 3: Add one integer(second parameter is default 98)
+>>> add_integer(2)
+100
+
+# Test case 4: Add a float and an integer
+>>> add_integer(100.3, -2)
+98
+
+# Test case 5: add an integer with a non-integer value(raise a TypeError)
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+# Test case 6: add None(raise TypeError)
+>>> add_integer(None)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+# Test case 8: add float NaN
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer
+
+# Test case 9: add float NaN
+>>> add_integer(0, float('NaN'))
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer

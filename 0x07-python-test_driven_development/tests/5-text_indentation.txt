@@ -1,0 +1,37 @@
+The ``text_indentation`` module
+
+``text_indentation``  prints a text with 2 new 
+lines after each of these characters: ., ? and :
+
+Import text_indentation:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test Case 1 text_indentation with string:
+	>>> text_indentation("I am Successful")
+	I am Successful
+
+	>>> text_indentation("pharmacy.School")
+	pharmacy.
+	<BLANKLINE>
+	School
+
+	>>> text_indentation("Ahmadu Bello. School? Are you still in school: Bolad")
+	Ahmadu Bello.
+	<BLANKLINE>
+	School?
+	<BLANKLINE>
+	Are you still in school:
+	<BLANKLINE>
+	Bolad
+
+# Test Case 2: text_indentation with non-string:
+	>>> text_indentation(123)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+# Test Case 3: Missing one argument:
+	>>> text_indentation()
+	Traceback (most recent call last):
+		...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'

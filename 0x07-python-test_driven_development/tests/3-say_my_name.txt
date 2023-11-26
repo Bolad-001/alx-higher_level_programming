@@ -1,0 +1,40 @@
+The ``say_my_name`` module
+
+``say_my_name`` - print the first and last name
+
+Import say_my_name:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test Case 1 (with correct input):
+
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+
+	>>> say_my_name("Bob")
+	My name is Bob 
+
+# Test Case 2 (non string):
+	>>> say_my_name(12, "White")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+# Test Case 3 (non string last name):
+	>>> say_my_name("Bolad", 222)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+# Test case 4 (trailing white spaces)
+	>>> say_my_name("Bolad@123", "Adebayo-123")
+	My name is Bolad@123 Adebayo-123
+
+# Test Case 5 (Missing two arguments):
+	>>> say_my_name()
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
