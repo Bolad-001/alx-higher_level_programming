@@ -37,5 +37,9 @@ class TestMaxInteger(unittest.TestCase):
         """ Test Case 7: Empty list """
         self.assertEqual(max_integer([]), None)
 
+    def test_begining_list(self):
+        """ Test Case 8: Empty list """
+        self.assertEqual(max_integer([9, 6, 8, 2]), 9)
+
 if __name__ == '__main__':
     unittest.main()
