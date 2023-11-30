@@ -15,7 +15,7 @@ Import text_indentation:
 	<BLANKLINE>
 	School
 
-	>>> text_indentation("Holberton.School? How are you: John")
+	>>> text_indentation("Holberton. School? How are you: John")
 	Holberton.
 	<BLANKLINE>
 	School?
