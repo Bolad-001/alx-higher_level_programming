@@ -2,6 +2,7 @@
 
 """ Lookup function """
 
+
 def lookup(obj):
     """ Funtion that returns the lsit of available
         attributes and methods """
