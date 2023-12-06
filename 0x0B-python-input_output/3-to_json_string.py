@@ -5,6 +5,6 @@ import json
 
 def to_json_string(my_obj):
     """ Funtion that return the rep. of
-        an object string 
+        an object string
     """
     return (json.dumps(my_obj))
