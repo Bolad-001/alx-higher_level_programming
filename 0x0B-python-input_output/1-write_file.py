@@ -3,7 +3,7 @@
 
 
 def write_file(filename="", text=""):
-    """ Function that write a string to a text file 
+    """ Function that write a string to a text file
         and return the umber of character written
     """
     with open(filename, 'w', encoding="utf-8") as f:
