@@ -1,24 +1,28 @@
 #!/usr/bin/python3
-""" Test module for class Base """
+""" Test Module for Base """
 import unittest
 from models.base import Base
 
 
-class TestBaseClass(unittest.TestCase):
-    """ """"
+class TestBase(unittest.TestCase):
+    """ Test class for Base model """
+    def test_base1(self):
+        """ Test Base """
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
 
-    def test_id_assignment(self):
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
 
-    b1 = Base()
-    b2 = Base()
-    b3 = Base()
-    b4 = Base(12)
-    b5 = Base()
+        b3 = Base()
+        self.assertEqual(b3.id, 3)
 
+        b4 = Base(12)
+        self.assertEqual(b4.id, 12)
 
-    self.assertEqual(b1.id)
-    self.assertEqual(b2.b1.id + 1)
-    self.assertEqual(b3.id, b2.id + 1)
-    self.assertNotEqual(b4.id)
+        b5 = Base()
+        self.assertEqual(b5.id, 4)
 
 
+if __name__ == '__main__':
+    unittest.main()
