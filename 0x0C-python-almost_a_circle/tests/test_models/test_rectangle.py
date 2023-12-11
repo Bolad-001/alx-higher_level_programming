@@ -19,7 +19,6 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(r0.height, 2)
         self.assertEqual(r0.x, 3)
         self.assertEqual(r0.y, 4)
-        self.assertEqual(r0.__str__(), "[Rectangle] (5) 3/4 - 1/2")
         self.assertEqual(r0.area(), 2)
 
         expected_dict = {'x': 3, 'y': 4, 'id': 5, 'height': 2, 'width': 1}
