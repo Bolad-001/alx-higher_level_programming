@@ -30,9 +30,9 @@ class Base:
         """ write JSON string rep. to a file """
         if list_objs is None:
             list_objs = []
-
         file_name = cls.__name__ + ".json"
-        json_data = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+        json_data = cls.to_json_string([obj.to_dictionary()
+                                        for obj in list_objs])
 
         with open(file_name, 'w', encoding="utf-8") as file:
             file.write(json_data)
@@ -68,4 +68,3 @@ class Base:
             return my_json
         except Exception:
             return []
-
