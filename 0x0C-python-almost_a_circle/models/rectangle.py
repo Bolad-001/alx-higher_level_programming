@@ -72,7 +72,9 @@ class Rectangle(Base):
     def display(self):
         """ print rectangle using '#' """
         for i in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
+        print()
 
     def __str__(self):
         return (f"[Rectangle] ({self.id})"
